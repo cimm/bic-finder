@@ -17,7 +17,7 @@ gem install bic-finder
 or add it to your Gemfile
 
 ```ruby
-gem 'bic-finder', '~> 0.0.0`
+gem 'bic-finder', '~> 0.0.0'
 ```
 
 ## Usage
