@@ -24,10 +24,11 @@ module BicFinder
         next unless bank_code.to_i.between?(row['From'].to_i, row['To'].to_i)
 
         bic = row['Biccode']
-        names = { en: row['Name English'],
-                  nl: row['Name Dutch'],
-                  fr: row['Name French'],
-                  de: row['Name German'] }
+        names = {}
+        names[:en] = row['Name English'] if row['Name English']
+        names[:nl] = row['Name Dutch']   if row['Name Dutch']
+        names[:fr] = row['Name French']  if row['Name French']
+        names[:de] = row['Name German']  if row['Name German']
         return new(bic, names)
       end
     end

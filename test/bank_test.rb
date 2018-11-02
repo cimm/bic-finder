@@ -89,6 +89,10 @@ module BicFinder
         assert_equal(bank.name(locale: :fr), names[:fr])
       end
 
+      it 'has no problem with missing languages' do
+        assert_nil(bank.name(locale: :de))
+      end
+
       it 'gets the first name if no language is specified' do
         assert_equal(bank.name, names[:en])
       end

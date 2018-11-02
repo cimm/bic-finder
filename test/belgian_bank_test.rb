@@ -53,5 +53,12 @@ module BicFinder
         assert_nil(BelgianBank.find_in_country('9999'))
       end
     end
+
+    describe 'self.names' do
+      it 'does not include missing languages' do
+        bank = BelgianBank.find_in_country('000')
+        refute_includes(bank.names.keys, :de)
+      end
+    end
   end
 end
