@@ -14,12 +14,12 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test)/})
 
   gem.add_development_dependency 'minitest', '~> 5.11', '>= 5.11.0'
-  gem.add_development_dependency 'rake',     '~> 10.0', '>= 10.0.0'
-  gem.add_development_dependency 'vcr',      '~> 4.0', '>= 4.0.0'
-  gem.add_development_dependency 'webmock',  '~> 3.4',  '>= 3.4.0'
+  gem.add_development_dependency 'rake',     '~> 12.0', '>= 10.0.0'
+  gem.add_development_dependency 'vcr',      '~> 5.0', '>= 4.0.0'
+  gem.add_development_dependency 'webmock',  '~> 3.6',  '>= 3.4.0'
 
   gem.add_runtime_dependency     'iso-iban',    '~> 0.1', '>= 0.1.0'
-  gem.add_runtime_dependency     'roo',         '~> 2.7', '>= 2.7.0'
-  gem.add_runtime_dependency     'rubyzip',     '~> 1.0', '>= 1.0.0'
+  gem.add_runtime_dependency     'roo',         '~> 2.8', '>= 2.7.0'
+  gem.add_runtime_dependency     'rubyzip',     '~> 1.2', '>= 1.0.0'
   gem.add_runtime_dependency     'smarter_csv', '~> 1.2', '>= 1.2.5'
 end
