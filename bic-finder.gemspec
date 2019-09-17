@@ -19,7 +19,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'webmock',  '~> 3.6',  '>= 3.4.0'
 
   gem.add_runtime_dependency     'iso-iban',    '~> 0.1', '>= 0.1.0'
-  gem.add_runtime_dependency     'roo',         '~> 2.8', '>= 2.7.0'
+  gem.add_runtime_dependency     'roo',         '~> 2.8.2', '>= 2.8.2'
   gem.add_runtime_dependency     'rubyzip',     '~> 1.2', '>= 1.0.0'
   gem.add_runtime_dependency     'smarter_csv', '~> 1.2', '>= 1.2.5'
 end
