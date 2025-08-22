@@ -42,7 +42,7 @@ The cache directory defaults to the system cache dir but can be configured if yo
 
 ```ruby
 BicFinder.configure do |config|
-  config.check_dir = 'your-prefered-directory'
+  config.cache_dir = 'your-prefered-directory'
 end
 ```
 
