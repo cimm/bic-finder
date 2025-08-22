@@ -20,7 +20,7 @@ module BicFinder
     # Finds the bank's BIC and multi-lingual name in the locally
     # cached CSV file from the provided bank code.
     def self.find_in_country(bank_code)
-      CSV.foreach(data_file, CSV_OPTIONS) do |row|
+      CSV.foreach(data_file, **CSV_OPTIONS) do |row|
         next unless bank_code.to_i.between?(row['From'].to_i, row['To'].to_i)
 
         bic = row['Biccode']

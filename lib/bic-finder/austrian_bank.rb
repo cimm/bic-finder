@@ -26,7 +26,7 @@ module BicFinder
     # cached CSV file from the provided bank code.
     def self.find_in_country(bank_code)
       # Using SmarterCSV here since the source file is badly formatted
-      SmarterCSV.process(data_file, CSV_OPTIONS).each do |row|
+      SmarterCSV.process(data_file, **CSV_OPTIONS).each do |row|
         next if bank_code != row[:bankleitzahl].to_s
 
         bic = row[:swift_code]
