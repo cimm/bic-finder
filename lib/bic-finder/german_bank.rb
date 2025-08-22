@@ -9,7 +9,7 @@ module BicFinder
     # Updates or creates a locally cached TXT
     # file with the German bank sort codes.
     def self.update
-      io = open(REMOTE_SOURCE_URI, 'rb')
+      io = URI.open(REMOTE_SOURCE_URI, 'rb')
       io.close
       FileUtils.mv(io.path, data_file)
     end
