@@ -6,7 +6,7 @@ module BicFinder
   class BelgianBank < Bank
     REMOTE_SOURCE_URI = URI.parse('https://www.nbb.be/doc/be/be/protocol/current_codes.xlsx').freeze
     SOURCE_CHECKSUM = '8478dabe8f90f1d643dc7e70f77a88d3'.freeze
-    CSV_OPTIONS = { skip_lines: /^\"version/, headers: true, skip_blanks: true }.freeze
+    CSV_OPTIONS = { skip_lines: /^\"?Version/i, headers: true, skip_blanks: true }.freeze
 
     # Updates or creates a locally cached CSV file with all Belgian IBAN
     # mappings by downloading the Excel file from the National Bank's website.
