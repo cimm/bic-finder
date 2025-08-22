@@ -11,7 +11,7 @@ module BicFinder
     # Updates or creates a locally cached CSV file with all Belgian IBAN
     # mappings by downloading the Excel file from the National Bank's website.
     def self.update
-      io = open(REMOTE_SOURCE_URI, 'rb')
+      io = URI.open(REMOTE_SOURCE_URI, 'rb')
       xlsx = Roo::Spreadsheet.open(io.path, extension: :xlsx)
       body = xlsx.sheet(0).to_csv
       File.open(data_file, 'wb') { |file| file.write(body) }

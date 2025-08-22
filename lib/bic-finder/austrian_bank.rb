@@ -11,7 +11,7 @@ module BicFinder
     # Updates or creates a locally cached CSV file with all Austrian IBAN
     # mappings by downloading the ZIP file from the Nationalbank's website.
     def self.update
-      io = open(REMOTE_SOURCE_URI, 'rb')
+      io = URI.open(REMOTE_SOURCE_URI, 'rb')
       Zip::File.open(io) do |zip_file|
         entry = zip_file.glob('*.csv').first
         stream = entry.get_input_stream
